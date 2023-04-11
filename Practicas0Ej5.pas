@@ -9,3 +9,14 @@ b. Imprima en pantalla el dinero que deberá cobrar el kiosquero si cada caramel
 valor de $1.60.
 
 }
+program ej5;
+
+var
+caramelos: integer;
+valorU,valorT: real;
+begin
+	read(caramelos);
+	valorU := 1.60;
+	valorT := valorU*caramelos;
+	write(valorT,1,2);
+end.
