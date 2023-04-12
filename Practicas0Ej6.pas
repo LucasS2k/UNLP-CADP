@@ -14,7 +14,7 @@ begin
 	writeLn('ingrese el precio actual del dolar');read(valorDolar);
 	writeLn('ingrese la cantidad de dolares');read(dolarCant);
 	writeLn('ingrese la comision');read(comision);
-	totalPesos :=valorDolar * valorDolar;
+	totalPesos :=valorDolar * dolarCant;
 	totalTransaccion:= totalPesos*comision/100;
 	write(totalTransaccion,1,2);
 end.
