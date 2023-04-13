@@ -4,7 +4,7 @@ se lee la secuencia:
 deberá informar: “El mayor número leído fue el 98”}
 program ej2;
 var
-    num1, max,i : integer;
+    num1,max,i : integer;
 
 begin
     for i:=1 to 10 do begin
