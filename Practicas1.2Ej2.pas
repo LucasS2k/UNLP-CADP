@@ -10,7 +10,7 @@ begin
     for i:=1 to 10 do begin
         writeln('ingrese' ,i, '° numero');
         readln(num1);
-        if i = 1 then // primera iteracion
+        if i = 1 then
             max := num1
         else
             if (num1>max) then
