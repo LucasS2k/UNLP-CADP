@@ -143,4 +143,9 @@ end
 end
 var L:lista
 begin
+L:=nil
+cargarLista() {aca adentro see lee y se pasa como parametro el dato nuevo al agregar que corresponda (agregarAtras, adelante, al final, ordenado)}
+
+
+
 end
