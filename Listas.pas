@@ -17,7 +17,7 @@ var aux:lista
 begin
 aux:=pi
 while (L <> nil) do begin
-write(aux^.datos.dato1){se realiza lo que se nesecite}
+write(aux^.elem.dato1){se realiza lo que se nesecite}
 aux:=aux^.sig{se avanza en la lista}
 end
 end
