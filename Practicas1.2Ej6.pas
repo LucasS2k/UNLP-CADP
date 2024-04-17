@@ -20,7 +20,7 @@ begin
       else
       if (precio < minimo) then
        minimo:= precio;
-    if(precio > 16) and (precio mod 2 = 0) then
+    if(precio > 16) and (codigo mod 2 = 0) then
     parSup16:=parSup16+1;  
   end;
   WriteLn('los codigos de los productos mas baratos son: ',minimo,' y ',secMinimo);
