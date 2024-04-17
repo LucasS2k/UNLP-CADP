@@ -9,7 +9,7 @@ minimo,secMinimo,parSup16,i,precio: Integer;
 codigo: Integer;
 begin
   minimo:=32767;
-  secMinimo:=32676;
+  secMinimo:=32766;
   parSup16:=0;
   for i:=1 to 200 do 
   begin
