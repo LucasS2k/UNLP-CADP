@@ -6,7 +6,7 @@ A%B*, donde:
 - Los caracteres % y * seguro existen
 Nota: en caso de no cumplir, informar que parte del patrón no se cumplió}
 
-program Ejercicio11;
+program Practicas2Ej11;
 
 procedure VerificarA(var cumple: boolean; var cantCar: integer);
 var

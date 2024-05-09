@@ -10,7 +10,7 @@ a) Un módulo para la lectura de la información de la escuela.
 b) Un módulo para determinar la relación docente-alumno (esa relación se obtiene del cociente entre la cantidad
 de alumnos y la cantidad de docentes).
 }
-program ej3;
+program Practicas3Ej3;
 type
 string20 = string[20];
 

@@ -6,7 +6,7 @@ cual debe procesarse.
 
 Por ejemplo: si se ingresa 385 22 1000 91, debe imprimir 11.
 }
-program Ejercicio7;
+program Practicas2Ej7;
 type
   rangoDigito = 0..9;
 
