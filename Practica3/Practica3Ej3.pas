@@ -10,7 +10,7 @@ a) Un módulo para la lectura de la información de la escuela.
 b) Un módulo para determinar la relación docente-alumno (esa relación se obtiene del cociente entre la cantidad
 de alumnos y la cantidad de docentes).
 }
-program Practicas3Ej3;
+program Practica3Ej3;
 type
 string20 = string[20];
 
@@ -29,30 +29,52 @@ writeln('ingrese la cantidad de alumnos');readln(e.cantAlu);
 writeln('ingrese la cantidad de docentes');readln(e.cantDoc);
 writeln('ingrese la localidad');readln(e.localidad);
 end;
-function relacion(A,B:Integer);
+procedure PRelacion(e:escuela; var rela:integer)
 begin
- relacion := cantAlu/cantDoc;
- end;
-var
-cantLP: integer;
-escuelaMejor1: string20;
-escuelaMejor2: string20;
-e:escuela;
-begin
-cantLP:=0;
-escuelaMejor1:='';
-escuelaMejor2:='';
-for i:= 1 to 2 do begin;
-leerEscuela(e);
-relacionEscuela := relacion(e.cantAlu, e.cantDoc);
-if (e.localidad = 'la plata') and (relacionEscuela > 23,435) then
-  cantLP := cantLP +1;
-if (relacionEscuela > escuelaMejor1) and (relacionEscuela > escuelaMejor2) then begin
-  escuelaMejor2 := escuelaMejor1;
-  escuelaMejor1 := relacionEscuela;
-end
-else if (relacionEscuela > escuelaMejor2) then 
- escuelaMejor2 := relacionEscuela;
+  rela:= e.cantAlu div e.cantDoc
 end;
- WriteLn(cantLP);
+function cantLP(e:escuela; rela:integer):integer
+begin
+  if (e.localidad = 'la plata') and (rela > 23435)then
+  begin
+    cantLP := cantLP + 1
+  end;
+end;
+procedure mejoresEscuelas (e:escuela ; rela:integer ; rela1:integer ; rela2:integer ; cue1:integer ; cue2:integer ; nom1:string ; nom2: string)
+begin
+  if (rela > rela2) then
+  begin
+    cue1:= cue2;
+    nom1:= nom2;
+    rela1:=rela2;
+    cue2:= e.cue;
+    nom2:= e.nombre;
+    rela2:= rela;
+  end
+  else if (rela > rela1) then
+  begin
+    nom1:=e.nombre;
+    cue1:= e.cue;
+    rela1:=rela;
+  end;
+end;
+var
+info:escuela;
+relacion;relacion1;relacion2:Integer;
+cuemejor1;cuemejor2;i:Integer;
+nombremejor1;nombremejor2: string20;
+begin
+  relacion1:=-1;
+  relacion2:=-2;
+  relacion:=0;
+  nombremejor1:='';
+  nombremejor2:='';
+  for i := 1 to 2400 do begin
+    leerEscuela(info);
+    PRelacion(info, relacion);
+    cantLP(info, relacion);
+    mejoresEscuelas(info, relacion1, relacion2, cuemejor1. cuemejor2, nombremejor1, nombremejor2)
+  end;
+  WriteLn('cantidad de escuelas en La PLata:', cantLP);
+  WriteLn('Mejores escuelas:', nombremejor1, cuemejor1,'y',nombremejor2, cuemejor2);
 end.

@@ -11,7 +11,7 @@ realizados durante los meses de verano (enero, febrero y marzo) y la cantidad de
 realizados en los primeros 10 días de cada mes. Nota: utilizar el módulo realizado en b) para la lectura
 de fecha.
 }
-program Practicas3ej2;
+program Practica3ej2;
 type
  fecha=record
  anio: integer;
